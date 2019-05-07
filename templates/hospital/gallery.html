@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block maincontent %}
+<!--inner banner-->
+<div class="inner-banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1>Gallery</h1>
+      </div>
+      <div class="col-md-5">
+        <ol class="breadcrumb">
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li class="active">Gallery Small</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<!--inner banner End-->
+
+<!--Main Content Start-->
+<div class="main-content">
+  <div class="gallery">
+    <div class="container">
+      <div class="row">
+        <ul class="gallery-img">
+          {% for img in object_list %}
+          <li class="col-md-4 col-sm-4">
+            <div class="gallery-thumb">
+              <div class="hover-info"> <strong>{{ img.title }}</strong> <a href="{{ img.image.url }}"
+                  data-rel="prettyPhoto[gallery]"><i class="fa fa-search-plus" aria-hidden="true"></i></a> </div>
+              <img src="{{ img.image.url }}" alt="">
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="row">
+        {% if is_paginated %}
+        {% include 'partials/_pagination.html' %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+<!--Main Content End-->
+{% endblock maincontent %}

@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Heart Care | Heart Hospital</title>
+  {% include 'partials/_css.html' %}
+
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+
+<body>
+  <!--Wrapper Start-->
+  <div class="wrapper">
+
+    <!--Header Start-->
+    {% include 'partials/_header.html' %}
+    <!--Header End-->
+    {% include 'partials/_sidebar.html' %}
+
+    <!--Main Slider-->
+    {% include 'partials/_slider.html' with sliders=sliders %}
+    <!--Main Slider End-->
+
+    <!-- Main Content Start -->
+    {% block maincontent %}
+
+    {% endblock maincontent %}
+    <!-- Main content End -->
+
+    <!--Footer Start-->
+    {% include 'partials/_footer.html' %}
+    <!--Footer End-->
+    {% include 'partials/_js.html' %}
+
+</body>
+
+</html>

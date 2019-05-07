@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block maincontent %}
+<!--inner banner-->
+<div class="inner-banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1>Services</h1>
+      </div>
+      <div class="col-md-5">
+        <ol class="breadcrumb">
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li class="active">Services</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<!--inner banner End-->
+
+<!--Main Content Start-->
+<div class="main-content">
+
+  <!--Services Start-->
+  <section class="services">
+    <div class="container">
+      <div class="row">
+        <div class="service-style-1">
+          <div class="row">
+            {% for service in object_list %}
+            <!--service box start-->
+            <div class="col-md-3 col-sm-3">
+              <div class="service-box">
+                <div class="ser-thumb"> <a href="{% url 'service_details' service.id %}" class="view"><i
+                      class="fa fa-heartbeat" aria-hidden="true"></i></a>
+                  <img src="{{ service.thumbnail.url }}" alt=""></div>
+                <div class="ser-content">
+                  <h3><a href="{% url 'service_details' service.id %}">{{ service.title }}</a></h3>
+                  <p>{{ service.description|truncatewords:15 }}</p>
+                </div>
+              </div>
+            </div>
+            <!--service box End-->
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Services End-->
+</div>
+<!--Main Content End-->
+{% endblock maincontent %}

@@ -1,0 +1,71 @@
+{% load static %}
+<footer class="footer">
+  <div class="footer-widgets">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="widget"> <img class="ft-logo" src="{% static 'heartcare/images/footer-logo.png' %}" alt="">
+            <p>The Heart Care Heart Hospital have latest technology machines with experty Heart specialist doctors
+              consectetur adipisicing elit. Distinctio vitae maiores enim ea atque? Natus iure autem cumque, quaerat
+              distinctio pariatur velit illo hic a eos paccusamus. </p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="widget">
+            <h3>Our Services</h3>
+            <ul>
+              {% for service in services|slice:':8' %}
+              <li><a href="{% url 'service_details' service.id %}"><i class="fa fa-arrow-right"></i>
+                  {{service.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="widget">
+            <h3>Expert Doctors</h3>
+            <ul>
+              {% for doctor in doctors|slice:':8' %}
+              <li><a href="{% url 'doctor_details' doctor.id %}"><i class="fa fa-arrow-right"></i> {{ doctor.name }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="widget">
+            <h3>Contact us</h3>
+            <address>
+              <ul>
+                <li> <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span> <span
+                    class="add-text"><strong>Main Branch:</strong> Dhanmondi 27, Dhaka</span> </li>
+                <li> <span class="icon"><i class="fa fa-phone-square" aria-hidden="true"></i></span> <span
+                    class="add-text"><strong>Call us Anytime at:</strong> +8801719058105</span> </li>
+                <li> <span class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span> <span
+                    class="add-text"><strong>For Inquiry:</strong> info@heartcare.com</span> </li>
+                <li> <span class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span> <span
+                    class="add-text"><strong>Our Timings:</strong> Mon-Sat: 9:00am-7:00pm</span> </li>
+              </ul>
+            </address>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-cr">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="footer-social"> <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#"><i
+                class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-google-plus"
+                aria-hidden="true"></i></a> <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a> <a
+              href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <p><strong>HeartCare</strong> © {% now 'Y' %}, All Rights Reserved, Design & Developed By Mahmudul Alam</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

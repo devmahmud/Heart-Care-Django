@@ -1,0 +1,388 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block maincontent %}
+<!--Main Content Start-->
+<div class="main-content">
+  <!--Welcome Section-->
+  <section class="welcome-section">
+    <div class="container">
+      <div class="row">
+        <div class="welcome-box">
+          <div class="col-md-6 col-sm-6">
+            <div class="welcome-text">
+              <div class="sectio-title-2"> <strong>Welcome to your</strong>
+                <h2>Heart Care</h2>
+              </div>
+              <p> The Heart Care Heart Hospital have latest technology machines with experty Heart specialist
+                doctors consectetur adipisicing elit. Distinctio vitae maiores enim ea atque? Natus iure autem
+                cumque, quaerat distinctio pariatur velit illo hic a eos accusamus deleniti totam repellendus
+                reiciendis, nobis vero dolorem nesciunt officia facere perspiciatis fugiat.</p>
+              <p>Sapiente accusamus repudiandae architecto corporis aspernatur. Eligendi, accusamus quas mollitia.
+                Natus iure autem cumque, quaerat distinctio pariatur velit illo hic a eos accusamus deleniti totam
+                repellendus reiciendis, nobis vero dolorem nesciunt officia facere perspiciatis fugiat.</p>
+              <strong class="signature">Adam Johns</strong>
+              <h6 class="designation">MS Heart Care Hospital</h6>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <div class="welcome-img"> <img src="{% static 'heartcare/images/welcome.jpg' %}" alt=""> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Welcome Section End-->
+
+  <!--Home Services Start-->
+  <section class="home-features">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-4">
+          <div class="features-box">
+            <h3>Cardio Monitoring</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since the 1500s.</p>
+            <a href="appointment.html">Get Free Appointment</a>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="features-box selected">
+            <h3>First Aid</h3>
+            <p>Pellentesque ligula odio, tempor sit amet fringilla vitae, pulvinar ullamcorper quamenatibus et
+              magnis dis parturient montes nasce</p>
+            <a href="contact-2.html">Contact Us</a>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="features-box">
+            <h3>Emergency Help</h3>
+            <p><span>Monday-Friday:</span> Full Day<br>
+              <span>Satuday:</span> Full Day<br>
+              <span>Sunday:</span> 7:00am - 05:00pm<br>
+            </p>
+            <a href="#">Callfor Info: +8801719058105</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Home Services End-->
+
+  <!--Services Section Start-->
+  <section class="home-services">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-title-3"> <strong>Our Departments</strong>
+            <h2>Departmental Services</h2>
+          </div>
+        </div>
+
+        <!--service style 1-->
+        <div class="col-md-12">
+          <div class="service-style-1">
+            <div class="row">
+              <!--service box start-->
+              {% for service in services %}
+              <div class="col-md-3 col-sm-3">
+                <div class="service-box">
+                  <div class="ser-thumb"> <a href="{% url 'service_details' service.id %}" class="view"><i
+                        class="fa fa-heartbeat" aria-hidden="true"></i></a> <img src="{{ service.thumbnail.url }}"
+                      alt="">
+                  </div>
+                  <div class="ser-content">
+                    <h3><a href="{% url 'service_details' service.id %}">{{ service.title }}</a></h3>
+                    <p>{{ service.description|truncatewords:15 }}</p>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+              <!--service box End-->
+            </div>
+          </div>
+        </div>
+        <!--service style 1 End-->
+
+      </div>
+    </div>
+  </section>
+  <!--Services Section End-->
+
+  <!--Heart Care Start-->
+  <section class="heart-care-services">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-title-3 white"> <strong>Our Core</strong>
+            <h2>Expert Services</h2>
+          </div>
+        </div>
+        <div class="col-md-5 col-sm-5">
+
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#service-1" aria-controls="service-1" role="tab"
+                data-toggle="tab"> <i class="fa fa-graduation-cap"></i> Experienced Surgeons</a></li>
+            <li role="presentation"><a href="#service-2" aria-controls="service-2" role="tab" data-toggle="tab"> <i
+                  class="fa fa-heartbeat"></i> Special Treatments</a></li>
+            <li role="presentation"><a href="#service-3" aria-controls="service-3" role="tab" data-toggle="tab"> <i
+                  class="fa fa-cloud"></i> Comfort Environment</a></li>
+            <li role="presentation"><a href="#service-4" aria-controls="service-4" role="tab" data-toggle="tab"> <i
+                  class="fa fa-user-md"></i> Talented Cardiologist</a></li>
+            <li role="presentation"><a href="#service-5" aria-controls="service-5" role="tab" data-toggle="tab"> <i
+                  class="fa fa-medkit"></i> High Tech Equipments</a></li>
+            <li role="presentation"><a href="#service-6" aria-controls="service-6" role="tab" data-toggle="tab"> <i
+                  class="fa fa-umbrella"></i> Personalized Care</a></li>
+          </ul>
+        </div>
+        <div class="col-md-7 col-sm-7">
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="service-1">
+              <div class="ser-tab-text">
+                <h3>Experienced Surgeons</h3>
+                <p> <i class="fa fa-graduation-cap"></i> Ut finibus sem in erat pretium, ultrices semper lorem
+                  aliquet. Nulla ultricies sagittis tellus at elementum. Cras consectetur congue diam nec imperdiet.
+                  Phasellus accumsan faucibus lectus. </p>
+                <ul>
+                  <li><i class="fa fa-check"></i> Vestibulum gravida massa ac sem potitor, ac effic.</li>
+                  <li><i class="fa fa-check"></i> Quisque non lacus tempus nisi fringilla feugiat.</li>
+                  <li><i class="fa fa-check"></i> Sed pretium diam in maximus is consectetur.</li>
+                </ul>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="service-2">
+              <div class="ser-tab-text">
+                <h3>Special Treatments</h3>
+                <p> <i class="fa fa-heartbeat"></i> Ut finibus sem in erat pretium, ultrices semper lorem aliquet.
+                  Nulla ultricies sagittis tellus at elementum. Cras consectetur congue diam nec imperdiet.
+                  Phasellus accumsan faucibus lectus. </p>
+                <ul>
+                  <li><i class="fa fa-check"></i> Vestibulum gravida massa ac sem potitor, ac effic.</li>
+                  <li><i class="fa fa-check"></i> Quisque non lacus tempus nisi fringilla feugiat.</li>
+                  <li><i class="fa fa-check"></i> Sed pretium diam in maximus is consectetur.</li>
+                </ul>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="service-3">
+              <div class="ser-tab-text">
+                <h3>Comfort Environment</h3>
+                <p> <i class="fa fa-cloud"></i> Ut finibus sem in erat pretium, ultrices semper lorem aliquet. Nulla
+                  ultricies sagittis tellus at elementum. Cras consectetur congue diam nec imperdiet. Phasellus
+                  accumsan faucibus lectus. </p>
+                <ul>
+                  <li><i class="fa fa-check"></i> Vestibulum gravida massa ac sem potitor, ac effic.</li>
+                  <li><i class="fa fa-check"></i> Quisque non lacus tempus nisi fringilla feugiat.</li>
+                  <li><i class="fa fa-check"></i> Sed pretium diam in maximus is consectetur.</li>
+                </ul>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="service-4">
+              <div class="ser-tab-text">
+                <h3>Talented Cardiologist</h3>
+                <p> <i class="fa fa-user-md"></i> Ut finibus sem in erat pretium, ultrices semper lorem aliquet.
+                  Nulla ultricies sagittis tellus at elementum. Cras consectetur congue diam nec imperdiet.
+                  Phasellus accumsan faucibus lectus. </p>
+                <ul>
+                  <li><i class="fa fa-check"></i> Vestibulum gravida massa ac sem potitor, ac effic.</li>
+                  <li><i class="fa fa-check"></i> Quisque non lacus tempus nisi fringilla feugiat.</li>
+                  <li><i class="fa fa-check"></i> Sed pretium diam in maximus is consectetur.</li>
+                </ul>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="service-5">
+              <div class="ser-tab-text">
+                <h3>High Tech Equipments</h3>
+                <p> <i class="fa fa-medkit"></i> Ut finibus sem in erat pretium, ultrices semper lorem aliquet.
+                  Nulla ultricies sagittis tellus at elementum. Cras consectetur congue diam nec imperdiet.
+                  Phasellus accumsan faucibus lectus. </p>
+                <ul>
+                  <li><i class="fa fa-check"></i> Vestibulum gravida massa ac sem potitor, ac effic.</li>
+                  <li><i class="fa fa-check"></i> Quisque non lacus tempus nisi fringilla feugiat.</li>
+                  <li><i class="fa fa-check"></i> Sed pretium diam in maximus is consectetur.</li>
+                </ul>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="service-6">
+              <div class="ser-tab-text">
+                <h3>Personalized Care</h3>
+                <p> <i class="fa fa-umbrella"></i> Ut finibus sem in erat pretium, ultrices semper lorem aliquet.
+                  Nulla ultricies sagittis tellus at elementum. Cras consectetur congue diam nec imperdiet.
+                  Phasellus accumsan faucibus lectus. </p>
+                <ul>
+                  <li><i class="fa fa-check"></i> Vestibulum gravida massa ac sem potitor, ac effic.</li>
+                  <li><i class="fa fa-check"></i> Quisque non lacus tempus nisi fringilla feugiat.</li>
+                  <li><i class="fa fa-check"></i> Sed pretium diam in maximus is consectetur.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Heart Care End-->
+
+
+  <!--Team Start-->
+  <section class="team">
+    <div class="container">
+      <div class="row">
+        <div class="section-title-3"> <strong>Our Team</strong>
+          <h2>Expert Team</h2>
+        </div>
+      </div>
+      <div class="row">
+        {% for doctor in experts|slice:':4' %}
+        <div class="col-md-3 col-sm-6">
+          <div class="team-box mb50">
+            <div class="team-thumb"> <a href="{% url 'doctor_details' doctor.id %}" class="view"><i class="fa fa-Heart"
+                  aria-hidden="true"></i></a> <img src="{{ doctor.picture.url }}" alt=""></div>
+            <div class="team-text">
+              <h5><a href="{% url 'doctor_details' doctor.id %}">{{ doctor.name }}</a></h5>
+              <strong>{{ doctor.speciality }}</strong>
+              <ul class="team-social">
+                {% if doctor.twitter %}
+                <li><a class="tw" href="{{ doctor.twitter }}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                {% endif %}
+                {% if doctor.facebook %}
+                <li><a class="fb" href="{{ doctor.facebook }}"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                </li>
+                {% endif %}
+                {% if doctor.instagram %}
+                <li><a class="insta" href="{{ doctor.instagram }}"><i class="fa fa-instagram"
+                      aria-hidden="true"></i></a></li>
+                {% endif %}
+              </ul>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  <!--Team End-->
+
+
+  <!--Testimonials + Faqs Start-->
+  <section class="testi-faq">
+    <div class="container">
+      <div class="row">
+
+        <!--Testimonials Start-->
+        <div class="col-md-6">
+          <div class="home-testimonials">
+            <div class="sectio-title-2"> <strong>Read What Says Our</strong>
+              <h2>Happy Patients</h2>
+            </div>
+            <div id="testimonial-slider" class="owl-carousel owl-theme">
+
+              <!--Slider Start-->
+              <div class="item">
+                <div class="testimonial-holder">
+                  <div class="user-thumb"> <img src="{% static 'heartcare/images/tuser.jpg' %}" alt=""> <strong>Anna
+                      Anderson</strong>
+                    <i>A heart patient</i> </div>
+                  <div class="test-text">
+                    <p>An exellent hospital and a Cardiologists. Quisque egestas libero vitae lacus sagittis, eget
+                      viverra tellus vehicula. Aenean efficitur faucibus felis, non laoreet nisl congue non. In quis
+                      pharetra urna. Aliquam in enim efficitur, bibendum dolor eu, elementum turpis.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimonial-holder">
+                  <div class="user-thumb"> <img src="{% static 'heartcare/images/tuser-2.jpg' %}" alt=""> <strong>Anna
+                      Anderson</strong>
+                    <i>A heart patient</i> </div>
+                  <div class="test-text">
+                    <p>An exellent hospital and a Cardiologists. Quisque egestas libero vitae lacus sagittis, eget
+                      viverra tellus vehicula. Aenean efficitur faucibus felis, non laoreet nisl congue non. In quis
+                      pharetra urna. Aliquam in enim efficitur, bibendum dolor eu, elementum turpis.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimonial-holder">
+                  <div class="user-thumb"> <img src="{% static 'heartcare/images/tuser.jpg' %}" alt=""> <strong>Anna
+                      Anderson</strong>
+                    <i>A heart patient</i> </div>
+                  <div class="test-text">
+                    <p>An exellent hospital and a Cardiologists. Quisque egestas libero vitae lacus sagittis, eget
+                      viverra tellus vehicula. Aenean efficitur faucibus felis, non laoreet nisl congue non. In quis
+                      pharetra urna. Aliquam in enim efficitur, bibendum dolor eu, elementum turpis.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!--Slider End-->
+
+            </div>
+          </div>
+        </div>
+        <!--Testimonials End-->
+
+        <!--FAQ Start-->
+        <div class="col-md-6">
+          <div class="home-faq">
+            <div class="sectio-title-2"> <strong>Feel Free For</strong>
+              <h2>Any FAQ’s</h2>
+            </div>
+            <div class="faqs">
+              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion"
+                        href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> How much you charge
+                        for consultancy </a> </h4>
+                  </div>
+                  <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body"> Our commercialization strategy involves a rapid development of
+                      treatments for both rotator cuff injuries in the shoulder and meniscus injuries of the knee
+                      joint, with an initial focus on the highly developed. </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse"
+                        data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        What kind of patients do you treat? </a> </h4>
+                  </div>
+                  <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body"> Our commercialization strategy involves a rapid development of
+                      treatments for both rotator cuff injuries in the shoulder and meniscus injuries of the knee
+                      joint, with an initial focus on the highly developed. </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse"
+                        data-parent="#accordion" href="#collapseThree" aria-expanded="false"
+                        aria-controls="collapseThree"> Where does my refering Cardiologist go? </a> </h4>
+                  </div>
+                  <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                    aria-labelledby="headingThree">
+                    <div class="panel-body"> Our commercialization strategy involves a rapid development of
+                      treatments for both rotator cuff injuries in the shoulder and meniscus injuries of the knee
+                      joint, with an initial focus on the highly developed. </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--FAQ End-->
+
+      </div>
+    </div>
+  </section>
+  <!--Testimonials + Faqs End-->
+
+</div>
+<!--Main Content End-->
+{% endblock maincontent %}

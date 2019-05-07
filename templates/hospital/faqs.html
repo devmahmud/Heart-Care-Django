@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block maincontent %}
+
+<!--inner banner-->
+<div class="inner-banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1>Faq’s</h1>
+      </div>
+      <div class="col-md-5">
+        <ol class="breadcrumb">
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li class="active">Faq’s</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<!--inner banner End-->
+
+<!--Main Content Start-->
+<div class="main-content">
+  <section class="faqs">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            {% for faq in object_list %}
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="heading{{ forloop.counter }}">
+                <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse"
+                    data-parent="#accordion" href="#collapse{{ forloop.counter }}" aria-expanded="false"
+                    aria-controls="collapse{{ forloop.counter }}">
+                    {{ faq.question }}</a></h4>
+              </div>
+              <div id="collapse{{ forloop.counter }}" class="panel-collapse collapse" role="tabpanel"
+                aria-labelledby="heading{{ forloop.counter }}">
+                <div class="panel-body">{{ faq.answer }}</div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <aside class="col-md-3">
+          <div class="sidebar">
+            <div class="widget search-widget">
+              <h3>Search</h3>
+              <form class="search-form">
+                <input placeholder="Enter Key words" type="search">
+                <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+              </form>
+            </div>
+            <div class="widget text-widget">
+              <h3>Text Widget</h3>
+              <p>Enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut
+                aliquid commodi consequatur quis autem.</p>
+            </div>
+            <div class="widget newsletter-widget">
+              <h3>Newsletter</h3>
+              <form class="newsletter-form">
+                <input placeholder="Enter your Email" type="email">
+                <button type="submit">Subscribe Now <i class="fa fa-envelope" aria-hidden="true"></i></button>
+              </form>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</div>
+<!--Main Content End-->
+{% endblock maincontent %}

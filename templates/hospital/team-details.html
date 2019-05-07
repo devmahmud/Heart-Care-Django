@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+
+{% block maincontent %}
+<!--inner banner-->
+<div class="inner-banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1>Doctors Details</h1>
+      </div>
+      <div class="col-md-5">
+        <ol class="breadcrumb">
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li class="active">Doctors Details</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<!--inner banner End-->
+
+<!--Main Content Start-->
+<div class="main-content">
+  <div class="team-details">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-6">
+          <div class="team-detail-img"> <img src="{{ object.picture.url }}" alt=""> </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+          <div class="team-details-text">
+            <div class="sectio-title-2"> <strong>{{ object.speciality }}</strong>
+              <h2>{{ object.name }}</h2>
+            </div>
+            <p>{{ object.details }}</p>
+            <ul>
+              {% for exp in object.expertize.all %}
+              <li><i class="fa fa-check-square-o" aria-hidden="true"></i>{{ exp.name }}</li>
+              {% endfor %}
+            </ul>
+            <ul class="team-social">
+              <li><strong>Share :</strong></li>
+              <li><a class="tw" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a class="fb" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a class="gp" href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+              <li><a class="insta" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+              <li><a class="ytp" href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+            </ul>
+            <a class="book-app" href="#">Book an Appointment</a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="team-exp">
+            <div class="sectio-title-2"> <strong>{{ object.speciality }}</strong>
+              <h2>Experiences</h2>
+            </div>
+            {{ object.experience}}
+          </div>
+        </div>
+      </div>
+
+      <!--Repated Team-->
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="team-slider">
+            <div class="sectio-title-2"> <strong>Our Expert & Professional</strong>
+              <h2>Cardiologist</h2>
+            </div>
+
+            <div id="team-slider" class="owl-carousel owl-theme">
+
+              <!--Slide item start-->
+              {% for doctor in doctors %}
+              <div class="item">
+                <div class="team-box">
+                  <div class="team-thumb"> <a href="{% url 'doctor_details' doctor.id %}" class="view"><i
+                        class="fa fa-Heart" aria-hidden="true"></i></a> <img src="{{ doctor.picture.url }}" alt="">
+                  </div>
+                  <div class="team-text">
+                    <h5><a href="{% url 'doctor_details' doctor.id %}">{{ doctor.name }}</a></h5>
+                    <strong>{{ doctor.speciality }}</strong>
+                    <ul class="team-social">
+                      {% if doctor.twitter %}
+                      <li><a class="tw" href="{{ doctor.twitter }}"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                      </li>
+                      {% endif %}
+                      {% if doctor.facebook %}
+                      <li><a class="fb" href="{{ doctor.facebook }}"><i class="fa fa-facebook"
+                            aria-hidden="true"></i></a>
+                      </li>
+                      {% endif %}
+                      {% if doctor.instagram %}
+                      <li><a class="insta" href="{{ doctor.instagram }}"><i class="fa fa-instagram"
+                            aria-hidden="true"></i></a></li>
+                      {% endif %}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+              <!--Slide item End-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Repated Team-->
+
+    </div>
+  </div>
+</div>
+<!--Main Content End-->
+{% endblock maincontent %}

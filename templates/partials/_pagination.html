@@ -1,0 +1,31 @@
+<div class="cp-pagination">
+    <nav aria-label="Page navigation">
+        <ul class="pagination">
+            {% if page_obj.has_previous %}
+            <li>
+                <a href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+                    Prev
+                </a>
+            </li>
+            {% endif %}
+
+            {% for page_num in paginator.page_range|slice:":10" %}
+            {% if page_obj.number == page_num %}
+            <li class="active"><a href="">{{ page_num }}</a></li>
+            {% else %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ page_num }}">{{ page_num }}</a>
+            </li>
+            {% endif %}
+            {% endfor %}
+
+            {% if page_obj.has_next %}
+            <li>
+                <a href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+                    Next
+                </a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>
