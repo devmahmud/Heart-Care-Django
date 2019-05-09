@@ -15,11 +15,11 @@ pip install -r requirements.txt
 ```
 open terminal and type
 
-https://github.com/devmahmud/Django-Board.git
+https://github.com/devmahmud/Heart-Care-Django.git
 ```
 or simply download using the url below
 ```
-https://github.com/devmahmud/Django-Board.git
+https://github.com/devmahmud/Heart-Care-Django.git
 ```
 # To migrate the database open terminal in project directory and type
 ```
