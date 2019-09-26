@@ -1,0 +1,217 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+@media (min-width:992px) and (max-width:1199px) {
+.slide-caption h1 {
+	font-size: 36px;
+}
+.welcome-img::after, .team-detail-img:after {
+	display: none;
+}
+.welcome-img img, .team-detail-img img {
+	width: 100%;
+}
+.features-box h3 {
+	font-size: 18px;
+}
+.features-box a {
+	position: inherit;
+	bottom: 0px;
+}
+body h3 {
+	font-size: 20px;
+}
+
+body h5 {
+    font-size: 16px;
+}
+
+.cp-tabs .nav-tabs > li > a {
+    font-size: 16px;
+    line-height: 40px;
+    margin-right: 1px;
+    padding: 0 17px;
+}
+
+.nav.navbar-nav.navbar-right {display:none;}
+
+
+
+
+}
+ @media (min-width:768px) and (max-width:991px) {
+.welcome-img img, .team-detail-img img {
+	width: 100%;
+}
+.nav.navbar-nav.navbar-right {
+	display: none;
+}
+.slide-caption h1 {
+	font-size: 24px;
+	margin: 0 0 10px;
+}
+.features-box h3 {
+	font-size: 16px;
+}
+.features-box a {
+	position: inherit;
+	bottom: 0px;
+}
+body h3 {
+	font-size: 18px;
+}
+.team-box {
+	margin-bottom: 20px;
+}
+.post-text {
+	width: 100%;
+	margin: 10px 0 0 0;
+}
+.welcome-img::after {
+	display: none;
+}
+.welcome-text, .team-details-text {
+	margin: 0px;
+	padding: 0px;
+}
+.welcome-img {
+	margin-bottom: 20px;
+}
+.facts {
+	background-repeat: repeat;
+}
+.team-detail-img::after {
+	display: none;
+}
+.news-box-classic .news-thumb {
+	width: 100%;
+}
+.news-box-classic .news-content {
+	width: 100%;
+}
+.content-404 {
+	width: 80%;
+}
+}
+ @media (min-width:280px) and (max-width:767px) {
+.top-bar, .welcome-img, .header-service-area {
+	display: none;
+}
+.nav-logo-area {
+	padding: 15px 0;
+}
+.site-header .navbar-brand {
+	margin: 5px 0 0;
+}
+.slide-caption.slide-2 {
+	display: none;
+}
+.navbar-nav {
+	margin: 10px;
+}
+.nav.navbar-nav.navbar-right {
+	display: none;
+}
+.welcome-section {
+	padding: 0 0 30px;
+}
+.welcome-img img {
+	max-width: 100%;
+	height: auto;
+}
+.welcome-img::after {
+	display: none;
+}
+.features-box {
+	margin-bottom: 30px;
+}
+.section-title-3 h2 {
+	font-size: 24px;
+}
+.heart-care-services .nav-tabs {
+	float: right;
+	margin-bottom: 30px;
+	position: relative;
+	width: 100%;
+	z-index: 999;
+}
+.team-box {
+	margin-bottom: 30px;
+}
+.user-thumb {
+	width: 100%;
+	text-align: center;
+	margin: 0px;
+}
+.test-text {
+	width: 100%;
+}
+.faqs .panel-default > .panel-heading h4 {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 25px;
+}
+body h2 {
+	font-size: 24px;
+}
+.footer-cr, .footer-cr p {
+	text-align: center;
+}
+.post-text {
+	float: right;
+	margin: 10px 0;
+	width: 100%;
+}
+.facts {
+	background-color: #bf0311;
+}
+.cp-tabs .nav-tabs > li > a {
+	font-size: 12px;
+	line-height: 40px;
+	margin-right: 1px;
+	padding: 0 5px;
+}
+.sectio-title-2 h2 {
+	font-size: 28px;
+}
+.app-form {
+	margin-bottom: 30px;
+}
+body h1 {
+	font-size: 40px;
+}
+.service-style-1 {
+	padding: 0 15px;
+}
+.team-detail-img img {
+	height: auto;
+	position: relative;
+	width: 100%;
+	z-index: 99;
+}
+.team-detail-img::after {
+	display: none;
+}
+.team-slider .owl-dots {
+	top: -25px;
+}
+.news-box-classic .news-thumb {
+	width: 100%;
+}
+.news-box-classic .news-content {
+	float: right;
+	margin: 10px 0 0;
+	width: 100%;
+}
+.user-comments {
+	width: 100%;
+}
+.comments .comments {
+	margin: 25px 0;
+	padding-left: 25px;
+}
+.content-404, .left-404, .right-404 {
+	width: 100%;
+}
+}

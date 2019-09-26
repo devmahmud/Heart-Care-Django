@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+/* Website Main Color Start */
+
+.site-header .navbar-default .navbar-nav > li > a:hover, .site-header .navbar-default .navbar-nav > .active > a, .site-header .navbar-default .navbar-nav > .active > a:focus, .site-header .navbar-default .navbar-nav > .active > a:hover, .site-header .navbar-default .navbar-nav > .open > a, .site-header .navbar-default .navbar-nav > .open > a:focus, .site-header .navbar-default .navbar-nav > .open > a:hover, .main-slider .owl-theme .owl-dots .owl-dot.active span, .main-slider .owl-theme .owl-dots .owl-dot:hover span, .site-header .navbar-nav > li > a.appoint, .site-header .navbar-nav > li > a.nav-search, .btn-1, .site-header .dropdown-menu > li > a:after, .app-form input[type="submit"], .header-style-two .nav-area, .learn-more, .play:hover, .cp-tabs .nav-tabs > li.active > a, .cp-tabs .nav-tabs > li.active > a:focus, .cp-tabs .nav-tabs > li.active > a:hover, .site-header .head-search .btn.btn-default, .main-slider .owl-theme .owl-dots .owl-dot.active span, .main-slider .owl-theme .owl-dots .owl-dot:hover span, .service-box-2:after, .Heart-box:hover .v-icon, .Heart-box:hover .v-text, .post-date, .team-two .team-social li a, .team-two .team-box .team-text:after,  .book-appointment-widget a,
+.cp-pagination .pagination > li > a:hover, .cp-pagination .pagination > li > span:hover, .book-app, .submit-btn, .news-thumb .date, .newsletter-form button,
+.news-detail blockquote, .comment-form input[type="submit"], .pro-hover a, .review-form input[type="submit"], .related-products .owl-dots .owl-dot.active span, 
+.related-products .owl-dots .owl-dot:hover span,
+.heart-care-services .nav-tabs>li.active>a, 
+.heart-care-services .nav-tabs>li.active>a:focus, 
+.heart-care-services .nav-tabs>li.active>a:hover,
+.heart-care-services .nav-tabs>li>a:hover,
+.services-nav h3,
+.site-header .dropdown-menu > li > a:hover,
+.features-box:hover, .features-box.selected,
+.footer .widget .rm,
+.home-testimonials .owl-theme .owl-dots .owl-dot.active span, .home-testimonials .owl-theme .owl-dots .owl-dot:hover span
+
+  {
+	background: #bf0311;
+}
+/* Text Color background: #bf0311; */
+
+.top-bar li .fa, .top-social a:hover, .view, .services-list .service h3 a:hover, .service-style-1 .service-box .ser-content h3 a:hover, .faqs .panel-default > .panel-heading h4 a, .faqs .panel-default > .panel-heading a::after, .team-text h5 a:hover, .section-title-3 strong, .post-text > h5 a:hover, .read-more:hover, .widget address .icon, .footer .widget a:hover, .footer-cr p strong, .footer-social a:hover, .post-meta li, .post-meta li:after, .post-meta li a, .header-service-area .icon, .header-service-area strong, .section-title-1 strong, .section-title-1 h2, .sectio-title-2 strong, .welcome-text .designation, .Heart-box .v-icon, .phone-icon,
+.services-nav .side-nav li:hover a, .services-nav .side-nav li.active a, .gallery-thumb .hover-info a, .archives li:before, .search-form button, .date-time, .right-404 strong, .prices, .review .fa,
+.login-social li, .login-social li a, .heart-care-services .nav-tabs>li>a
+
+ {
+	color: #bf0311;
+}
+/* Border Color */
+
+
+.main-slider .owl-theme .owl-dots .owl-dot.active span, .main-slider .owl-theme .owl-dots .owl-dot:hover span, .read-more:hover, .Heart-box .v-icon, .Heart-box .v-text, .phone-icon,
+.services-nav .side-nav li:hover, .services-nav .side-nav li.active, .cp-pagination .pagination > li > a:hover, .cp-pagination .pagination > li > span:hover, .user-comments, .comments .user-thumb,
+.input-group .form-control:focus,
+.home-testimonials .owl-theme .owl-dots .owl-dot.active span, .home-testimonials .owl-theme .owl-dots .owl-dot:hover span
+ {
+	border-color: #bf0311;
+}
+
+
+.pro-box .pro-thumb {outline-color:#bf0311;}
+
+/* Website Main Color End */
